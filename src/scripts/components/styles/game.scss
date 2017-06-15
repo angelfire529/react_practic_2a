@@ -1,0 +1,41 @@
+.card {
+        border: 1px solid #d1d1d1;
+    padding: 5px;
+    margin-top: 15px;
+
+    span {
+        &.selected {
+              background-color: #eee;
+              color: #ddd;
+              cursor: not-allowed;
+          }
+          &.used {
+              background-color: #aaddaa;
+              color: #99bb99;
+              cursor: not-allowed;
+          }
+    }
+}
+
+.fa.fa-star  {
+    margin: 0.5em;
+    font-size: 28px;
+}
+
+button[disabled] {
+    cursor: not-allowed !important;
+}
+
+span {
+        display: inline-block;
+        margin: 0.5em;
+        text-align: center;
+        background-color: #ccc;
+        width: 24px;
+        border-radius: 50%;
+      &:hover {
+          cursor: pointer;
+          }  
+
+          
+    }
