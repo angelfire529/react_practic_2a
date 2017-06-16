@@ -22,9 +22,22 @@
     font-size: 28px;
 }
 
-button[disabled] {
-    cursor: not-allowed !important;
+button {
+    &[disabled] {
+        cursor: not-allowed !important;
+    }
+    
 }
+
+.buttons {
+        position: absolute;
+        left: -35px;
+    }
+
+.done {
+    padding-top: 15px;
+}
+
 
 span {
         display: inline-block;
