@@ -26,17 +26,48 @@ button {
     &[disabled] {
         cursor: not-allowed !important;
     }
+    &:hover {
+        color: #fff;
     
+        .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -150%);
+        }
+    }    
+}
+
+.btn-success {
+    &:hover {
+        color: #fff;
+    
+        .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -150%);
+        }
+    } 
 }
 
 .buttons {
-        position: absolute;
+        position: relative;
         left: -35px;
-    }
+        .tooltip {
+            position: absolute;
+            visibility: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            border: 1px solid #d1d1d1;
+            border-radius: 10px;
+            color: #2b97f1;
+            padding: 5px;
+        }
+}
 
 .done {
     padding-top: 15px;
 }
+
 
 
 span {

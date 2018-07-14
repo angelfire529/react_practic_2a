@@ -7,8 +7,6 @@ import './styles/game.scss';
 
 
 const Stars = (props) => {
-    //const numberOfStars = 1 + Math.floor(Math.random() * 9);
-
     return (
         <div className="col-xs-6">
             {_.range(props.numberOfStars).map((number, i) => <i key={i} className="fa fa-star"></i>)}
@@ -23,6 +21,7 @@ const Button = (props) => {
         case true:
             button = <button className="btn btn-success" onClick={props.acceptAnswer}>
                 <i className="fa fa-check"></i>
+                <div className="tooltip">Please click button again!</div>
             </button>
             break;
         case false:
@@ -39,13 +38,15 @@ const Button = (props) => {
     }
     return (
         <div className="col-xs-1 buttons">
-            {button}
+        
+        {button}
             <br /><br />
             <button className="btn btn-sm btn-warning text-center"
             onClick={props.refresh} 
             disabled={noMoreRedraws(props.redraws)}>
                 <i className="fa fa-refresh"  > {props.redraws}</i>
             </button>
+            
         </div>
     );
 }
@@ -59,7 +60,7 @@ const Answer = (props) => {
 }
 
 const Numbers = (props) => {
-    const arrayOfNumbers = _.range(1, 9);
+    const arrayOfNumbers = _.range(1, 10);
     const numberClassName = (number) => {
         if (props.selectedNumbers.indexOf(number) >= 0) {
             return 'selected';
