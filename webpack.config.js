@@ -9,14 +9,10 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:9000',
         'webpack/hot/only-dev-server',
-        //'tether',
-        //'webpack-hot-middleware/client?reload=true' 
-        //'font-awesome-loader',
-        //bootstrapEntryPoints.dev,
         path.resolve(__dirname, './src/scripts/main.js')
     ],
     output: {
-        path: __dirname + '/dist/scripts',
+        path: __dirname + '/dist',
         filename: 'index.bundle.js',
         publicPath: '/'
     },
